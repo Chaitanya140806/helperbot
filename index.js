@@ -42,17 +42,6 @@ client.on('message', message => {
 			return message.reply('You can not do this!');
 		}
 	}
-	command(client, 'status', (message) => {
-		const content = message.content.replace('.status ', '')
-		// "!status hello world" -> "hello world"
-	
-		client.user.setPresence({
-		  activity: {
-			name: content,
-			type: 0,
-		  },
-		})
-	});
 
 	if (command.args && !args.length) {
 		let reply = `You didn't provide any arguments, ${message.author}!`;
